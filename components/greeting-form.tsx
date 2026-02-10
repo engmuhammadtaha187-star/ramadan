@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { cn } from '@/lib/utils';
 
 interface GreetingFormProps {
   onSubmit: (name: string) => void;
@@ -61,11 +62,12 @@ export function GreetingForm({ onSubmit }: GreetingFormProps) {
             disabled={!name.trim() || isLoading}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className={`w-full py-4 text-lg font-bold rounded-2xl transition-all duration-300 shadow-lg flex items-center justify-center gap-3
-              ${!name.trim() || isLoading
-                ? 'bg-muted text-muted-foreground cursor-not-allowed'
-                : 'bg-gradient-to-r from-primary to-orange-400 text-primary-foreground hover:shadow-primary/30'}
-            `}
+            className={cn(
+              "w-full py-4 text-lg font-bold rounded-2xl transition-all duration-300 shadow-lg flex items-center justify-center gap-3",
+              !name.trim() || isLoading
+                ? "bg-muted text-muted-foreground cursor-not-allowed"
+                : "bg-gradient-to-r from-primary to-orange-400 text-primary-foreground hover:shadow-primary/30"
+            )}
           >
             {isLoading ? (
               <>

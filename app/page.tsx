@@ -140,7 +140,7 @@ export default function Home() {
           transition={{ delay: 1 }}
           className="absolute bottom-4 text-center text-xs md:text-sm text-muted-foreground/50"
         >
-          <p>© 2024 جميع الحقوق محفوظة</p>
+          <p>© 2026 جميع الحقوق محفوظة</p>
         </motion.footer>
       </div>
     </div>

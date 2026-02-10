@@ -1,5 +1,7 @@
 'use client';
 
+// Trigger build: 2026-02-10
+
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { GreetingForm } from '@/components/greeting-form';
